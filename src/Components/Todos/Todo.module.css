@@ -1,0 +1,61 @@
+.todoListItem {
+	text-align: left;
+	background-color: #eee;
+	color: #555555;
+	padding: 12px;
+	margin-bottom: 15px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	border: 2px solid transparent;
+}
+
+.todoListItem p {
+	margin-left: 10px;
+	font-size: 1.3rem;
+	width: 92%;
+	user-select: none;
+}
+
+.todoListItem:last-child {
+	margin-bottom: 0;
+}
+
+.todoRiFillIcon {
+	color: forestgreen;
+	font-size: 1.4rem;
+	user-select: none;
+	width: 8%;
+}
+
+.completedTodoListItem {
+	background-color: unset;
+	border: 2px solid gray;
+	color: gray;
+}
+
+.todoListItem.completedTodoListItem p,
+.todoListItem.completedTodoListItem .todoRiFillIcon,
+.todoListItem.completedTodoListItem .todoCheckIcon,
+.todoListItem.completedTodoListItem .todoDeleteIcon {
+	color: gray;
+}
+
+.todoCheckIcon{
+	margin-left: 10px;
+}
+.todoCheckIcon,
+.todoDeleteIcon {
+	cursor: pointer;
+	color: #bbbbbb;
+	font-size: 1.7rem;
+	transition: transform 0.2s ease, color 0.1s ease;
+}
+
+:where(.todoCheckIcon, .todoDeleteIcon):hover {
+	transform: scale(1.2);
+	color: green;
+}
+.todoDeleteIcon:hover {
+	color: darkred;
+}
